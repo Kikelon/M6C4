@@ -1,0 +1,20 @@
+<mat-toolbar  color="primary">
+    <button mat-mini-fab [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+    </button>    
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/formulario">
+            <mat-icon>view_list</mat-icon>
+            <span>Formulario</span>
+        </button>
+        <button mat-menu-item routerLink="/vista">
+            <mat-icon>manage_search</mat-icon>
+            <span>Vista</span>
+        </button>
+        <button mat-menu-item routerLink="/data">
+            <mat-icon>list_alt</mat-icon>
+            <span>Datos</span>
+        </button>
+    </mat-menu>
+    <span>Servicios & Routing App</span>
+</mat-toolbar>

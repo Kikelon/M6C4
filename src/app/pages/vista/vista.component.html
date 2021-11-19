@@ -1,0 +1,15 @@
+<div id="vista">
+    <mat-form-field appearance="fill">
+        <mat-label>Código de la ciudad (XXX)</mat-label>
+        <input matInput #codigoCiudad autocomplete="off" value="MAD">
+    </mat-form-field>
+    <button mat-raised-button color="primary"
+        (click)="buscarPorCodigo(codigoCiudad.value); codigoCiudad.value = ''">Buscar</button>
+    <ng-container *ngIf="mostrar">
+        <mat-list role="list">
+            <mat-list-item role="listitem">Ciudad: {{ ciudad.nombre }}</mat-list-item>
+            <mat-list-item role="listitem">Código: {{ ciudad.codigo }}</mat-list-item>
+            <mat-list-item role="listitem">País: {{ ciudad.pais }}</mat-list-item>
+        </mat-list>
+    </ng-container>
+</div>

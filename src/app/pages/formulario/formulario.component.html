@@ -1,0 +1,19 @@
+<div id="toma-datos">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nombre de la ciudad</mat-label>
+        <input matInput #nombreCiudad autocomplete="off" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Código de la ciudad (XXX)</mat-label>
+        <input matInput #codigoCiudad autocomplete="off" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>País de la ciudad</mat-label>
+        <input matInput #paisCiudad autocomplete="off" value="">
+    </mat-form-field>
+    <div id="Botones">    
+        <button mat-raised-button (click)="addCity(nombreCiudad.value, paisCiudad.value, codigoCiudad.value); nombreCiudad.value = ''; codigoCiudad.value = ''; paisCiudad.value = ''">Añadir</button>
+        <button mat-raised-button (click)="delCity(codigoCiudad.value); nombreCiudad.value = ''; codigoCiudad.value = ''; paisCiudad.value = ''">Borrar</button>
+        <button mat-raised-button (click)="modCity(nombreCiudad.value, paisCiudad.value, codigoCiudad.value); nombreCiudad.value = ''; codigoCiudad.value = ''; paisCiudad.value = ''">Modificar</button>
+    </div>
+</div>
