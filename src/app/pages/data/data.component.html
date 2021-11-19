@@ -1,0 +1,27 @@
+<ng-container *ngIf="ciudades.length>0; else isEmpty">
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Ciudad</th>
+                <th scope="col">Código</th>
+                <th scope="col">País</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let city of ciudades; let i = index; even as isEven;" >
+                <tr [ngClass]="{ 'even' : isEven }">
+                    <th scope="row">{{ i }}</th>
+                    <td>{{ city.nombre }}</td>
+                    <td>{{ city.codigo }}</td>
+                    <td>{{ city.pais }}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</ng-container>
+<ng-template #isEmpty>
+    <div>
+        <h1>No hay ciudades que mostrar en la Base de Datos</h1>
+    </div>
+</ng-template>
